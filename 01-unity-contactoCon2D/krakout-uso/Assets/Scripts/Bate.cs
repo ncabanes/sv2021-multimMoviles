@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bate : MonoBehaviour
 {
+    float velocidad = 7;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,9 @@ public class Bate : MonoBehaviour
     void Update()
     {
         float vertical = Input.GetAxis("Vertical");
-        transform.Translate(0, vertical, 0);
+        transform.Translate(
+            0, 
+            vertical * velocidad * Time.deltaTime, 
+            0);
     }
 }
