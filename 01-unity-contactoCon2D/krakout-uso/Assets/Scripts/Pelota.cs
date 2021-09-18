@@ -8,7 +8,7 @@ public class Pelota : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().
-            velocity = new Vector2(3, 2);
+            velocity = new Vector2(-3, 2);
 
     }
 

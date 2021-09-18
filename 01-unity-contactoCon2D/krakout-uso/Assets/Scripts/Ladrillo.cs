@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ladrillo : MonoBehaviour
 {
+    [SerializeField] Transform prefabExplosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,12 @@ public class Ladrillo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Transform explosion = Instantiate(
+            prefabExplosion, 
+            transform.position, 
+            Quaternion.identity);
+        Destroy(explosion.gameObject, 1f);
         Destroy(gameObject);
+
     }
 }
