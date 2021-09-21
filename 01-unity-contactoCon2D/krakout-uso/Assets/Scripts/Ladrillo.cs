@@ -23,14 +23,18 @@ public class Ladrillo : MonoBehaviour
         Debug.Log("Boom");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(
+        Collision2D collision)
     {
-        Transform explosion = Instantiate(
-            prefabExplosion, 
-            transform.position, 
-            Quaternion.identity);
-        Destroy(explosion.gameObject, 1f);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Pelota")
+        { 
+            Transform explosion = Instantiate(
+                prefabExplosion,
+                transform.position,
+                Quaternion.identity);
+            Destroy(explosion.gameObject, 1f);
+            Destroy(gameObject);
+        }
 
     }
 }
