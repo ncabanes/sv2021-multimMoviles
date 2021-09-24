@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ladrillo : MonoBehaviour
 {
     [SerializeField] Transform prefabExplosion;
+    [SerializeField] GameObject gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,8 @@ public class Ladrillo : MonoBehaviour
         Collision2D collision)
     {
         if (collision.gameObject.tag == "Pelota")
-        { 
+        {
+            gameController.SendMessage("IncrementarPuntos");
             Transform explosion = Instantiate(
                 prefabExplosion,
                 transform.position,
