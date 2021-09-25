@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     static private int puntos = 0;
-    //static private int vidas = 3;
+    static private int vidas = 3;
     [SerializeField] int nivel = 1;
     [SerializeField] int nivelMax = 2;
     [SerializeField] int ladrillos = 3;
     [SerializeField] UnityEngine.UI.Text textoPuntos;
+    [SerializeField] GameObject pelota;
 
     void Start()
     {
@@ -34,15 +35,31 @@ public class GameController : MonoBehaviour
             else
             {
                 puntos = 0;
+                vidas = 3;
                 nivel = 1;
                 SceneManager.LoadScene("Menu");
             }
         }
     }
 
+    public void PerderVida()
+    {
+        vidas--;
+        ActualizarMarcador();
+        pelota.SendMessage("Recolocar");
+        if (vidas <= 0)
+        {
+            puntos = 0;
+            vidas = 3;
+            nivel = 1;
+            SceneManager.LoadScene("Menu");
+        }
+    }
+
     private void ActualizarMarcador()
     {
         textoPuntos.text = "Puntos\n" + puntos
+             + "\n\nVidas\n" + vidas
              + "\n\nNivel\n" + nivel
              + "\n\nRestantes\n" + ladrillos;
     }

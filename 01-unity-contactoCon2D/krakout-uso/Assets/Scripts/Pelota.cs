@@ -7,9 +7,7 @@ public class Pelota : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().
-            velocity = new Vector2(-3, 2);
-
+        Recolocar();
     }
 
     // Update is called once per frame
@@ -21,5 +19,12 @@ public class Pelota : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GetComponent<AudioSource>().Play();
+    }
+
+    public void Recolocar()
+    {
+        transform.position = new Vector2(4.3f, -0.5f);
+        GetComponent<Rigidbody2D>().
+            velocity = new Vector2(-3, 2);
     }
 }
