@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PersonajeMovil : MonoBehaviour
 {
-    float velocidad = 10f;
+    float velocidadAvance = 20f;
+    float velocidadRotacion = 30f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +16,12 @@ public class PersonajeMovil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(
-            -vertical * velocidad * Time.deltaTime,
-            0,
-            horizontal * velocidad * Time.deltaTime);
+        float avance = Input.GetAxis("Vertical") *
+            velocidadAvance * Time.deltaTime;
+        float rotacion = Input.GetAxis("Horizontal") * 
+            velocidadRotacion * Time.deltaTime;
+        transform.Rotate(Vector3.up, rotacion);
+        transform.position += transform.forward * 
+            avance;
     }
 }
