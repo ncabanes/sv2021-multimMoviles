@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Flipper : MonoBehaviour
 {
+    [SerializeField] string lado = "D";
+
     HingeJoint bisagra;
     JointSpring muelle;
     float fuerzaFlipper = 10000f;
@@ -21,10 +23,17 @@ public class Flipper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") < -0.1f)
+        if ((lado == "I") 
+            && (Input.GetAxis("Horizontal") < -0.1f))
         {
             bisagra.spring = muelle;
             muelle.targetPosition = -60;
+        }
+        else if ((lado == "D") 
+            && (Input.GetAxis("Horizontal") > 0.1f))
+        {
+            bisagra.spring = muelle;
+            muelle.targetPosition = 60;
         }
         else
         {
