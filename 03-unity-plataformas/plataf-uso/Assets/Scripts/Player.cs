@@ -7,12 +7,15 @@ public class Player : MonoBehaviour
     float velocidad = 10f;
     float fuerzaSalto = 5f;
     float alturaPersonaje;
+    Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
         alturaPersonaje = GetComponent<Collider2D>().
             bounds.size.y;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,11 @@ public class Player : MonoBehaviour
             0,
             0
             );
+        if ((horizontal > 0.1f) || (horizontal < -0.1f))
+        {
+            anim.Play("PlayerAndando");
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             if (GetComponent<Collider2D>().
@@ -33,6 +41,7 @@ public class Player : MonoBehaviour
                 GetComponent<Rigidbody2D>().
                         AddForce(Vector2.up * fuerzaSalto,
                         ForceMode2D.Impulse);
+                anim.Play("PlayerSaltando");
             }
 
             /*
