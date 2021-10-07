@@ -26,6 +26,16 @@ public class Player : MonoBehaviour
             );
         if (Input.GetButtonDown("Jump"))
         {
+            if (GetComponent<Collider2D>().
+                IsTouchingLayers(
+                    LayerMask.GetMask("CapaFondo")))
+            {
+                GetComponent<Rigidbody2D>().
+                        AddForce(Vector2.up * fuerzaSalto,
+                        ForceMode2D.Impulse);
+            }
+
+            /*
             RaycastHit2D hit = Physics2D.Raycast(
                 transform.position, Vector2.down);
             if (hit.collider != null)
@@ -40,7 +50,7 @@ public class Player : MonoBehaviour
                 }
 
             }
-
+            */
         }
     }
 }

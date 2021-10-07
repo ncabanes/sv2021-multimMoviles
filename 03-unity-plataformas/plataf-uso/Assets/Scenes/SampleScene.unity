@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 63008389}
   - component: {fileID: 63008391}
   - component: {fileID: 63008390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 121972035}
   - component: {fileID: 121972037}
   - component: {fileID: 121972036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 138927842}
   - component: {fileID: 138927844}
   - component: {fileID: 138927843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 152671566}
   - component: {fileID: 152671568}
   - component: {fileID: 152671567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 157276469}
   - component: {fileID: 157276471}
   - component: {fileID: 157276470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 179040612}
   - component: {fileID: 179040614}
   - component: {fileID: 179040613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 501306110}
   - component: {fileID: 501306112}
   - component: {fileID: 501306111}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 720209064}
   - component: {fileID: 720209066}
   - component: {fileID: 720209065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 766087548}
   - component: {fileID: 766087550}
   - component: {fileID: 766087549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 788564520}
   - component: {fileID: 788564522}
   - component: {fileID: 788564521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: 861310984}
   - component: {fileID: 861310986}
   - component: {fileID: 861310985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 932217977}
   - component: {fileID: 932217979}
   - component: {fileID: 932217978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1822,7 +1822,7 @@ GameObject:
   - component: {fileID: 1022397749}
   - component: {fileID: 1022397751}
   - component: {fileID: 1022397750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 1061862312}
   - component: {fileID: 1061862314}
   - component: {fileID: 1061862313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +2042,7 @@ GameObject:
   - component: {fileID: 1210132935}
   - component: {fileID: 1210132937}
   - component: {fileID: 1210132936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2152,7 +2152,7 @@ GameObject:
   - component: {fileID: 1226325474}
   - component: {fileID: 1226325476}
   - component: {fileID: 1226325475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2262,7 +2262,7 @@ GameObject:
   - component: {fileID: 1328620521}
   - component: {fileID: 1328620523}
   - component: {fileID: 1328620522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2372,7 +2372,7 @@ GameObject:
   - component: {fileID: 1355876171}
   - component: {fileID: 1355876173}
   - component: {fileID: 1355876172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2482,7 +2482,7 @@ GameObject:
   - component: {fileID: 1415510358}
   - component: {fileID: 1415510360}
   - component: {fileID: 1415510359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2592,7 +2592,7 @@ GameObject:
   - component: {fileID: 1443966658}
   - component: {fileID: 1443966660}
   - component: {fileID: 1443966659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 1513001697}
   - component: {fileID: 1513001699}
   - component: {fileID: 1513001698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 1554674042}
   - component: {fileID: 1554674044}
   - component: {fileID: 1554674043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2979,7 +2979,7 @@ GameObject:
   - component: {fileID: 1855107732}
   - component: {fileID: 1855107734}
   - component: {fileID: 1855107733}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3089,7 +3089,7 @@ GameObject:
   - component: {fileID: 1924280433}
   - component: {fileID: 1924280435}
   - component: {fileID: 1924280434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3199,7 @@ GameObject:
   - component: {fileID: 1928607570}
   - component: {fileID: 1928607572}
   - component: {fileID: 1928607571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: longplatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,7 +3309,7 @@ GameObject:
   - component: {fileID: 2126480767}
   - component: {fileID: 2126480769}
   - component: {fileID: 2126480768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shortplatform (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
