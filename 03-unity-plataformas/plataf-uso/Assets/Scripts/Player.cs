@@ -62,4 +62,11 @@ public class Player : MonoBehaviour
             */
         }
     }
+
+    public void Recolocar()
+    {
+        transform.position = new Vector2(-9.3f, 0.1f);
+        GetComponent<Rigidbody2D>().
+            velocity = new Vector2(0, 0);
+    }
 }

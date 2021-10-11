@@ -31,4 +31,13 @@ public class Enemy : MonoBehaviour
                 (numeroSiguientePos + 1) % wayPoints.Count;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            FindObjectOfType<GameController>().SendMessage("PerderVida");
+            Destroy(gameObject);
+        }
+    }
 }
