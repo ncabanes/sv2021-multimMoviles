@@ -47,14 +47,15 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Player>().SendMessage("Recolocar");
         if (vidas <= 0)
         {
-            marcador.text = "Game over!!!";
-            marcador.color = new Color(255, 0, 0);
-            Invoke("TerminarPartida", 2f);
+            StartCoroutine( TerminarPartida() );
         }
     }
 
-    private void TerminarPartida()
+    private IEnumerator TerminarPartida()
     {
+        marcador.text = "Game over!!!";
+        marcador.color = new Color(255, 0, 0);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Bienvenida");
     }
 }
