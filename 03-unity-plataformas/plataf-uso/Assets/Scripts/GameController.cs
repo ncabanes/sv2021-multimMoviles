@@ -47,7 +47,14 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Player>().SendMessage("Recolocar");
         if (vidas <= 0)
         {
-            SceneManager.LoadScene("Bienvenida");
+            marcador.text = "Game over!!!";
+            marcador.color = new Color(255, 0, 0);
+            Invoke("TerminarPartida", 2f);
         }
+    }
+
+    private void TerminarPartida()
+    {
+        SceneManager.LoadScene("Bienvenida");
     }
 }
