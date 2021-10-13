@@ -5,32 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] UnityEngine.UI.Text marcador;
-    int puntos = 0;
-    int vidas = 3;
+    UnityEngine.UI.Text marcador;
+    static int puntos = 0;
+    static int vidas = 3;
+    static int nivelActual = 1;
+    int nivelMax = 2;
     int itemsRestantes;
 
-    // Start is called before the first frame update
     void Start()
     {
         itemsRestantes = FindObjectsOfType<Item>().Length;
+        marcador = FindObjectOfType<UnityEngine.UI.Text>();
+        ActualizarMarcador();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ItemRecogido()
     {
         puntos += 10;
-        ActualizarMarcador();
         itemsRestantes--;
+        ActualizarMarcador();
         if (itemsRestantes <= 0)
         {
-            // TO DO: Avanzar nivel
-            Debug.Log("Sin items restantes");
+            nivelActual++;
+            if (nivelActual <= nivelMax)
+                SceneManager.LoadScene("Nivel" + nivelActual.ToString("00"));
+            else
+                StartCoroutine(TerminarPartida());
         }
     }
 
@@ -47,7 +53,7 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Player>().SendMessage("Recolocar");
         if (vidas <= 0)
         {
-            StartCoroutine( TerminarPartida() );
+            StartCoroutine(TerminarPartida());
         }
     }
 
@@ -56,6 +62,9 @@ public class GameController : MonoBehaviour
         marcador.text = "Game over!!!";
         marcador.color = new Color(255, 0, 0);
         yield return new WaitForSeconds(3);
+        puntos = 0;
+        vidas = 3;
+        nivelActual = 1;
         SceneManager.LoadScene("Bienvenida");
     }
 }
