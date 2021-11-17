@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvArbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Árbol binario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivArbol"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivArbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/binario" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Definición de teoría de grafos Un árbol binario sencillo de tamaño 9, 3 niveles (nivel 0 hasta nivel 3) y altura 4 (altura = máximo nivel + 1), con un nodo raíz cuyo valor es 2.  En teoría de grafos, se usa la siguiente definición: «Un árbol binario es un grafo conexo, acíclico y no dirigido tal que el grado de cada vértice no es mayor a 2». De esta forma solo existe un camino entre un par de nodos.  Un árbol binario con enraizado es como un grafo que tiene uno de sus vértices, llamado raíz, de grado no mayor a 2. Con la raíz escogida, cada vértice tendrá un único padre, y nunca más de dos hijos. Si rehusamos el requerimiento de la conectividad, permitiendo múltiples componentes conectados en el grafo, llamaremos a esta última estructura un bosque'. Tipos de árboles binarios  Un árbol binario es un árbol en el que ningún nodo puede tener más de dos subárboles. En un árbol binario cada nodo puede tener cero, uno o dos hijos (subárboles). Se conoce el nodo de la izquierda como hijo izquierdo y el nodo de la derecha como hijo derecho.  Existen tipos de árboles binarios que suelen usarse para fines específicos, como:      Árbol binario de búsqueda     Árbol de Fibonacci  Implementación en C  Un árbol binario puede declararse de varias maneras. Algunas de ellas son:  Estructura con manejo de memoria dinámica, siendo el puntero que apunta al árbol de tipo tArbol:  typedef struct nodo {     int clave;     struct nodo *izdo, *dcho; }Nodo;  Estructura con arreglo indexado:  typedef struct tArbol {   int clave;   tArbol hIzquierdo, hDerecho; } tArbol; tArbol árbol[NUMERO_DE_NODOS];  En el caso de un árbol binario casi-completo (o un árbol completo), puede utilizarse un sencillo arreglo de enteros con tantas posiciones como nodos deba tener el árbol. La información de la ubicación del nodo en el árbol es implícita a cada posición del arreglo. Así, si un nodo está en la posición i, sus hijos se encuentran en las posiciones 2i+1 y 2i+2, mientras que su padre (si tiene), se encuentra en la posición truncamiento((i-1)/2) (suponiendo que la raíz está en la posición cero). Este método se beneficia de un almacenamiento más compacto y una mejor localidad de referencia, particularmente durante un recorrido en preorden. La estructura para este caso sería por tanto:  int árbol[NUMERO_DE_NODOS]; "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArbol" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
