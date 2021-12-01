@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registroLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <Button
+        android:id="@+id/btFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        android:text="Modificar Fecha"
+        app:layout_constraintStart_toEndOf="@+id/tvFecha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Modificar Hora"
+        app:layout_constraintStart_toStartOf="@+id/btFecha"
+        app:layout_constraintTop_toBottomOf="@+id/btFecha" />
+
+    <Button
+        android:id="@+id/btGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="68dp"
+        android:text="Guardar"
+        app:layout_constraintStart_toStartOf="@+id/sbPrioridad"
+        app:layout_constraintTop_toBottomOf="@+id/sbPrioridad" />
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="338dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Descripción"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tvHora"
+        app:layout_constraintTop_toBottomOf="@+id/btHora" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btFecha" />
+
+    <TextView
+        android:id="@+id/tvHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/tvFecha"
+        app:layout_constraintTop_toTopOf="@+id/btHora" />
+
+    <SeekBar
+        android:id="@+id/sbPrioridad"
+        android:layout_width="333dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/etDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
